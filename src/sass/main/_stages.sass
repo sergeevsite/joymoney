@@ -1,0 +1,58 @@
+.stages
+  &__title
+    text-align: center
+  &__subtitle
+    display: none
+    margin-bottom: 19px
+    font-size: 16px
+    text-align: center
+    color: $text-subtitle
+  &-block
+    display: flex
+    align-items: center
+    justify-content: space-between
+  &-offer
+    background-image: url('../img/stages/elipse.png')
+    background-size: contain
+    background-repeat: no-repeat
+    height: 280px
+    margin-left: -52px
+    margin-right: 10px
+    &__image
+      min-width: 366px
+      margin-left: -62px
+      margin-right: 30px
+    &__text
+      transform: translateY(50px)
+      padding-right: 40px
+      margin-left: 52px
+      color: $white
+      font-size: 36px
+  &-box
+    min-width: 269px
+    text-align: center
+    &:nth-child(2)
+      min-width: 226px
+    &__number
+      position: relative
+      font-size: 160px
+      color: $blue
+      text-shadow: 1px 2px 7px rgba(0, 0, 0, 0.25)
+      z-index: -1
+    &__title
+      padding: 7px 0
+      font-size: 36px
+      font-weight: normal
+      color: $text-title
+      background-color: $white
+      transform: translateY(-75px)
+    &__text
+      padding: 0 8px
+      color: $text-subtitle
+      transform: translateY(-70px)
+  &-arrow
+    transform: translateY(-20px)
+    padding-left: 15px
+    padding-right: 15px
+    img
+      max-width: 60px

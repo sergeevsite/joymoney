@@ -1,0 +1,416 @@
+@media (max-width: 1280px) // Для экранов 1280px - 1024px
+  .header
+    &-navbar
+      &_active
+        width: 329px
+  .hero
+    &-bg
+      &__circle
+        width: 656px
+        height: 656px
+        &:after
+          width: 159px
+          height: 159px
+        &:before
+          display: none
+      &__image
+        width: 480px
+    &-menu
+      font-size: 16px
+    &-offer
+      &__text
+        width: 434px
+        font-size: 48px
+        line-height: 58px
+  .calc
+    width: 434px
+    padding: 32px 30px
+    &__title
+      font-size: 36px
+      padding-right: 0
+    &-slider
+      align-items: baseline
+      &__label
+        font-size: 18px
+    &-result
+      font-size: 16px
+    &__link
+      font-size: 16px
+    &__button
+      padding: 13px 34px
+
+  .stages
+    padding-bottom: 0
+    padding-top: 48px
+    &-offer
+      height: 240px
+      &__text
+        width: 200px
+        padding-right: 10px
+        margin-left: 52px
+        font-size: 24px
+        transform: translateY(40px)
+    &-box
+      &__number
+        font-size: 100px
+      &__title
+        font-size: 24px
+        transform: translateY(-45px)
+      &__text
+        padding: 0 30px
+        font-size: 14px
+        transform: translateY(-40px)
+    &-arrow
+      padding: 0
+
+  .products
+    padding-top: 40px
+    padding-bottom: 60px
+    &-card
+      padding: 32px 38px
+      max-width: 288px
+      &__title
+        font-size: 24px
+      &__description
+        font-size: 16px
+      
+  .feedback
+    padding-bottom: 70px
+    margin-top: -80px
+    &-offer
+      &__text
+        width: 278px
+        font-size: 48px
+        line-height: 58px
+    &-form
+      max-width: 407px
+      padding: 38px 32px
+      font-size: 16px
+      &__button
+        font-size: 18px
+
+    .footer
+      &-box
+        &__title
+          font-size: 16px
+
+@media (max-width: 1024px) // Для экранов 1024px - 768px
+  .hero
+    &-menu
+      display: none
+    &-offer
+      &__text
+        width: 326px
+        font-size: 36px
+        line-height: 44px
+    &-bg
+      &__image
+        width: 390px
+        bottom: -165px
+  .calc
+    width: 380px
+    &-slider
+      &__label
+        font-size: 16px
+    &-result
+      font-size: 14px
+    &__link
+      font-size: 14px
+
+  .title
+    font-size: 36px
+  .stages
+    padding-top: 28px
+    &__subtitle
+      display: block
+    &-box
+      min-width: 216px
+      &__text
+        padding: 0
+        width: 210px
+    &-offer
+      display: none
+    &-arrow
+      padding: 0 7px
+      transform: translateY(-10px)
+      img
+        max-width: 20px
+  .products
+    &-card
+      padding: 32px 21px
+      max-width: 222px
+      &__button
+        padding: 11px 62px
+        font-size: 16px
+  .feedback
+    margin-top: 0
+    padding-bottom: 50px
+    &-bg
+      &__image
+        width: 370px
+        transform: translate(40px, -100px)
+      &__circle
+        width: 381px
+        height: 381px
+        border: 50px solid #FFA24E
+        transform: translateY(-100px)
+        &:after
+          display: none
+    &-offer
+      &__text
+        font-size: 36px
+        line-height: 44px
+    &-form
+      max-width: 352px
+      transform: translateY(-390px)
+      &__label 
+        margin-bottom: 8px
+      &__input
+        margin-bottom: 21px
+
+  .footer
+    &-box
+      &__title
+        display: none
+    &-logo
+      display: flex
+      align-items: center
+      justify-content: space-between
+    &-menu
+      display: flex
+    &-mobile
+      display: flex
+    &-regime
+      margin-left: 16px
+      margin-bottom: 0
+      font-size: 14px
+      color: $text-subtitle
+    &-block
+      display: none
+    &-social
+      display: flex
+      align-items: center
+      justify-content: space-between
+      width: 128px
+    &-line
+      margin: 24px 0
+    &-info
+      margin-bottom: 10px
+      font-size: 12px
+
+@media (max-width: 768px) // Для экранов 768px - 320px
+  body
+    font-size: 16px
+  .header
+    &-humburger
+      padding: 6px 0
+    &-phone
+      margin-right: 0
+      &-menu
+        display: block
+        margin-top: 36px
+      &__menu
+        font-size: 24px
+    &-regime
+      display: none
+      &-menu
+        display: block
+        margin-top: 5px
+    &-form
+      &__button
+        width: max-content
+        padding: 0
+        &:before
+          display: none
+    &-contacts
+      flex-direction: column
+      align-items: flex-start
+  .hero
+    &-logo
+      width: 126px
+    &-mobile
+      &__text
+        position: relative
+        display: block
+        margin: 24px 0
+        font-size: 32px
+        font-weight: bold
+        line-height: 39px
+        color: $white
+        z-index: 1
+    &-form
+      &__button
+        padding: 11px
+      &__image
+        margin-right: 5px
+    &-offer
+      display: flex
+      background-color: transparent
+      &__text
+        display: none
+    &-bg
+      &__circle
+        position: relative
+        margin-top: -350px
+        width: 320px
+        height: 320px
+        border: 50px solid $orange-hover
+        transform: translate(-50px, 270px)
+        z-index: 0
+        &:after
+          width: 219px
+          height: 219px
+          transform: translate(370px, 350px)
+      &__image
+        position: relative
+        left: 0
+        bottom: -625px
+  .calc
+    position: relative
+    right: 0
+    padding: 32px 15px
+    padding-top: 24px
+    width: 100%
+    &-slider
+      flex-direction: column
+      &__label
+        margin-top: 10px
+        margin-bottom: 10px
+        font-size: 18px
+  
+  .title
+    font-size: 32px
+  .stages
+    &__subtitle
+      margin-top: 8px
+      font-size: 18px
+    &-block
+      flex-direction: column
+    &-box
+      margin-bottom: -50px
+      width: 100%
+      max-width: 269px
+      &__number
+        font-size: 160px
+      &__title
+        font-size: 36px
+        transform: translateY(-75px)
+      &__text
+        margin: 0 auto
+        width: 100%
+        font-size: 18px
+        transform: translateY(-70px)
+    &-arrow
+      width: 100%
+      max-width: 30px
+      padding: 0
+      transform: rotate(90deg)
+  
+  .products
+    padding-bottom: 30px
+    &__title
+      margin-bottom: 0px
+    &-card
+      margin: 20px 0
+      &:hover
+        transform: scale(1)
+
+  .owl-carousel.owl-loaded // Стили для слайдера
+    margin: 0 auto
+    width: 230px
+  .owl-nav
+    display: flex
+    align-items: center
+  .prev
+    transform: rotate(180deg)
+  .products-wrap
+    display: flex
+
+  .feedback
+    padding-top: 64px
+    overflow: hidden
+    &-mobile
+      &__text
+        display: block
+        margin: 0
+        margin-bottom: 28px
+        width: 100%
+        font-size: 36px
+        font-weight: bold
+        line-height: 44px
+        text-align: center
+        color: $text-title
+    &-block
+      transform: translateY(0px)
+    &-bg
+      &__circle
+        margin-bottom: 150px
+        position: relative
+        width: 311px
+        height: 311px
+        transform: translate(-60px, 220px)
+        &:after
+          display: block
+          width: 134px
+          height: 134px
+          transform: translate(140px, 290px)
+        &:before
+          content: ''
+          position: absolute
+          right: 0
+          width: 134px
+          height: 134px
+          border: 50px solid $orange-hover
+          border-radius: 50%
+          transform: translate(150px, -320px)
+      &__image
+        transform: translate(0px, 20px)
+    &-form
+      transform: translateY(-800px)
+      position: relative
+      right: 0
+      width: 100%
+      &__label
+        font-size: 18px
+      &__input
+        height: 40px
+      &__button
+        font-size: 16px
+        padding: 11px 45px
+      &__text
+        font-size: 14px
+    &-offer
+      display: flex
+      justify-content: center
+      height: 88px
+      &__text
+        display: none
+
+  .footer
+    &-logo
+      flex-direction: column
+    &-menu
+      margin-top: 30px
+      width: 100%
+      flex-direction: column
+      align-items: center
+      li
+        margin-bottom: 7px
+    &-contact
+      flex-direction: column
+    &-mobile
+      flex-direction: column
+    &-button
+      margin-bottom: 15px
+      padding: 13px 26px
+    &-regime
+      margin-left: 0
+      margin-bottom: 
+    &-box
+      &__title
+        display: block
+        margin-top: 30px
+    &-line
+      display: none
+    &-info
+      display: none

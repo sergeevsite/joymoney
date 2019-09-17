@@ -1,0 +1,147 @@
+.header
+  position: fixed
+  top: 0
+  width: 100%
+  color: $white
+  background-color: $main
+  z-index: 20
+  &-menu
+    &__item
+      &:visited
+        color: $white
+  &-phone
+    &-menu
+      display: none
+  &-regime
+    &-menu
+      display: none
+  &-block
+    position: relative
+    display: flex
+    justify-content: space-between
+    align-items: center
+  &-humburger
+    display: flex
+    align-items: center
+    cursor: pointer
+    transition: 0.2s
+    &:hover
+      .header-humburger__button
+        &:after
+          transform: translateY(8px)
+        &:before
+          transform: translateY(-10px)
+    &__button
+      margin-right: 8px
+      width: 24px
+      height: 2px
+      background-color: $white
+      transition: 0.2s
+      &:after
+        content: ''
+        display: block
+        width: 24px
+        height: 2px
+        background-color: $white
+        transform: translateY(6px)
+        transition: 0.3s
+      &:before
+        content: ''
+        display: block
+        width: 24px
+        height: 2px
+        background-color: $white
+        transform: translateY(-8px)
+        transition: 0.2s
+  &-navbar
+    position: absolute
+    top: 0
+    left: 0
+    display: flex
+    justify-content: flex-end
+    width: 0px
+    height: 100vh
+    background-color: $blue
+    transition: 0.3s
+    &_active
+      width: 35%
+  &-wrap
+    display: flex
+    flex-direction: column
+    z-index: 20
+  &-button
+    display: flex
+    justify-content: space-between
+    margin-top: 5px
+    width: 100%
+  &-close
+    display: flex
+    align-items: center
+    justify-content: center
+    align-self: flex-end
+    width: 24px
+    height: 24px
+    cursor: pointer
+    &:hover
+      opacity: 0.7
+    &__button
+      width: 24px
+      height: 2px
+      background-color: $white
+      transform: rotate(45deg)
+      transition: 0.3s
+      &:after
+        content: ''
+        display: block
+        width: 24px
+        height: 2px
+        background-color: $white
+        transform: rotate(90deg)
+  &-menu
+    margin-top: 31px
+    flex-direction: column
+    li
+      margin-bottom: 19px
+  &-social
+    margin-top: 38px
+    display: flex
+    align-items: center
+    &__icon
+      text-decoration: none
+      &:nth-child(2)
+        margin-left: 16px
+      .social-menu
+        &:hover
+          path
+            stroke: $main
+        path
+          transition: 0.2s
+  &-contacts
+    display: flex
+    align-items: center
+  &-regime
+    font-size: 14px
+  &-form
+    display: none
+    &__button
+      display: flex
+      align-items: center
+      padding: 0px 22px
+      width: 217px
+      background-color: $main
+      box-shadow: none
+      &:before
+        content: ''
+        display: inline-block
+        margin-right: 24px
+        margin-left: 2px
+        width: 1px
+        height: 32px
+        background-color: $bg
+      &:hover
+        background: $main
+        box-shadow: none
+    &__image
+      margin-right: 8px
+
+    

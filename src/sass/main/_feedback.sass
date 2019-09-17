@@ -1,0 +1,81 @@
+.feedback
+  padding-top: 0
+  padding-bottom: 90px
+  margin-top: -50px
+  &-mobile
+    &__text
+      display: none
+  &-block
+    transform: translateY(140px)
+  &-bg
+    position: relative
+    &__circle
+      position: absolute
+      width: 441px
+      height: 441px
+      border: 70px solid $orange-hover
+      border-radius: 50%
+      z-index: -1
+      &:after
+        content: ''
+        position: absolute
+        right: 0
+        width: 94px
+        height: 94px
+        border: 40px solid $orange-hover
+        border-radius: 50%
+        transform: translate(240px, 220px)
+    &__image
+      transform: translateX(120px)
+  &-offer
+    position: relative
+    background-color: $main
+    z-index: 1  
+    &__text
+      padding: 10px 0
+      width: 370px
+      margin: 0
+      font-size: 64px
+      font-weight: bold
+      line-height: 78px
+      color: $white
+  &-form
+    position: absolute
+    top: 0
+    right: 16px
+    padding: 45px 51px
+    max-width: 520px
+    box-shadow: 0px 1px 7px rgba(0, 0, 0, 0.25)
+    border-radius: 20px
+    background-color: $white
+    color: $text-subtitle
+    transform: translateY(-410px)
+    z-index: 2
+    &__label 
+      display: block
+      margin-bottom: 5px
+      order: 1
+    &__input
+      position: relative
+      bottom: 0
+      display: block
+      order: 2
+      margin-bottom: 30px
+      padding: 16px
+      width: 100%
+      height: 48px
+      border: 1px solid $text-subtitle
+      border-radius: 10px
+      outline: none
+      &:nth-child(6)
+        margin-bottom: 33px
+      &:focus
+        border: 1px solid $main-hover
+      &:focus ~ label
+        color: $main-hover
+    &__button
+      margin-bottom: 19px
+  &-field
+    display: flex
+    flex-direction: column
+  

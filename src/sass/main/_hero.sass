@@ -1,0 +1,126 @@
+.hero
+  background: linear-gradient(180deg, #689CB4 0%, #85D3F8 100%)
+  padding-top: 60px
+  padding-bottom: 0
+  overflow: hidden
+  &-mobile
+    &__text
+      display: none
+  &-menu
+    &__item
+      &:visited
+        color: $white
+  &-header
+    display: flex
+    align-items: center
+    justify-content: space-between
+  &-bg
+    &__circle
+      margin-top: -190px
+      width: 696px
+      height: 696px
+      border: 80px solid $orange-hover
+      border-radius: 50%
+      transform: translateY(240px)
+      &:after
+        content: ''
+        position: absolute
+        right: 0
+        width: 179px
+        height: 179px
+        border: 50px solid $orange-hover
+        border-radius: 50%
+        transform: translate(340px, -110px)
+      &:before
+        content: ''
+        position: absolute
+        right: 0
+        width: 129px
+        height: 129px
+        border: 40px solid $orange-hover
+        border-radius: 50%
+        transform: translate(570px, 0)
+    &__image
+      position: absolute
+      left: 31px
+      bottom: -275px
+  &-offer
+    position: relative
+    background-color: rgba(22, 108, 183, 0.6)
+    z-index: 1
+    &__text
+      padding: 10px 0
+      width: 579px
+      margin: 0
+      font-size: 64px
+      font-weight: bold
+      line-height: 78px
+      color: $white
+  &-form
+    &__button
+      display: flex
+      align-items: center
+      justify-content: center
+      background-color: $main
+      box-shadow: 0px 0px 10px rgba(22, 108, 183, 0.55)
+      &:hover
+        background: $main-hover
+        box-shadow: 0px 0px 20px rgba(22, 108, 183, 0.75)
+      &:active
+        box-shadow: inset 0px 1px 7px rgba(0, 0, 0, 0.3), inset 0px -1px 7px rgba(0, 0, 0, 0.3)
+// Стили для калькулятора
+.calc
+  position: absolute
+  right: 16px
+  top: -400px
+  padding: 55px
+  border-radius: 20px
+  box-shadow: 0px 1px 10px rgba(0, 0, 0, 0.25)
+  background-color: $white
+  color: $text-subtitle
+  &__title
+    padding-right: 50%
+    margin-bottom: 8px
+    font-weight: normal
+  &-slider
+    display: flex
+    justify-content: space-between
+    font-size: 24px
+    &__value
+      font-weight: 600
+  &-sign
+    display: flex
+    justify-content: space-between
+    height: 25px
+    font-size: 32px
+    &__button
+      border: none
+      background-color: $white
+      color: $text-subtitle
+      cursor: pointer
+      outline: none
+  &__input
+    appearance: none
+    width: 100%
+    height: 4px
+    margin-bottom: 19px
+    background: $blue
+    border-radius: 5px
+    outline: none
+    &::-webkit-slider-thumb
+      appearance: none
+      width: 24px
+      height: 24px
+      background: $orange
+      border-radius: 50%
+      border: 2px solid $white
+      cursor: pointer
+  &-result
+    margin-bottom: 7px
+  &__link
+    display: block
+  &__button
+    margin-top: 24px
+    background-color: $orange
+  
+    
