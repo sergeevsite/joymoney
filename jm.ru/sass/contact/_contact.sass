@@ -1,0 +1,77 @@
+.maps
+    padding-top: 24px
+.maps-title
+    font-size: 48px
+    line-height: 58p
+    color: #4F4F4F
+    border-left: 4px solid #FFA24E
+    padding-left: 10px
+    margin-bottom: 35px
+
+.maps-body
+    display: flex
+    justify-content: space-between
+    width: 100%
+    max-width: 1220px
+    @media ( max-width: 768px )
+        flex-direction: column
+        align-items: center
+
+.maps-body-item
+    // max-width: 520px
+    width: 44%
+    &__up
+        max-width: 515px
+        height: 308px
+        @media (min-width: 769px) and ( max-width: 991px )
+            max-width: 360px
+            
+    &__down
+        h4
+            margin-top: 24px
+            font-size: 24px
+            line-height: 29px
+            color: #4F4F4F
+        @media ( max-width: 768px )
+            padding-left: 15px
+            padding-bottom: 15px
+    @media ( max-width: 768px )
+        width: 100%
+    
+.maps-down-adress
+    display: flex
+    flex-wrap: wrap
+    width: 100%
+    @media ( max-width: 768px )
+        flex-direction: column
+        margin-bottom: 10px
+.item-adress
+    width: 50%
+    margin-top: 10px
+    margin-bottom: 10px
+    padding-left: 26px
+    padding-right: 5px
+    p 
+        display: flex
+        margin-left: -29px
+        font-style: normal
+        font-weight: 600
+        font-size: 18px
+        line-height: 22px
+        color: #166CB7
+        img 
+            padding-right: 5px
+    sub
+        color: #828282
+    @media ( max-width: 768px )
+        width: 100%
+        margin-bottom: 10px
+    @media ( min-width: 768px ) and ( max-width: 992px )
+        width: 75%
+
+.item-adress-absolutly
+    @media ( min-width: 993px )
+        width: 63%
+
+.ymaps-2-1-76-map ymaps
+    border-radius: 5px

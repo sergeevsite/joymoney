@@ -1,0 +1,65 @@
+.step
+  padding-top: 24px
+  &-tab
+    padding: 5px 0
+    width: 100%
+    font-weight: normal
+    font-size: 14px
+    line-height: 17px
+    text-transform: uppercase
+    background-color: $stepBg
+    color: $stepText
+    &.active
+      background-color: $orangeBtn
+      color: $white
+    &:nth-child(1)
+      padding-right: 100px
+      text-align: right
+    @media (max-width: 768px)
+      &:nth-child(1)
+        padding-right: 50px
+    &:nth-child(2)
+      position: relative
+      padding: 5px 100px
+      text-align: center
+      &:after, &:before
+        content: ''
+        position: absolute
+        top: -6px
+        width: 15px
+        height: 40px
+        background-color: $stepBg
+        transform: rotate(25deg)
+      &:after
+        left: -10px
+        border-left: 2px solid $white
+      &:before
+        right: -10px
+        border-right: 2px solid $white
+      &.active
+        &:after, &:before
+          background-color: $orangeBtn
+    @media (max-width: 768px)
+      &:nth-child(2)
+        padding: 5px 0
+    &:nth-child(3)
+      padding-left: 100px
+      text-align: left
+    @media (max-width: 768px)
+        &:nth-child(3)
+          padding-left: 50px
+    &s
+      display: flex
+      justify-content: space-between
+      padding: 0
+  @media (max-width: 575px)
+    &-tab
+      font-size: 10px
+      line-height: 11px
+  @media (max-width: 365px)
+    &-tab
+      font-size: 9px
+      line-height: 11px
+  &__button
+    margin-top: 32px
+  

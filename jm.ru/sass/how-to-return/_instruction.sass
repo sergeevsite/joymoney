@@ -1,0 +1,115 @@
+.instruction
+  margin-top: 44px
+  padding-top: 50px
+  padding-bottom: 60px
+  background-color: $bg
+  &-wrapper
+    margin: 0 auto
+    margin-top: 32px
+    max-width: 730px
+  &-block
+    display: flex
+    justify-content: flex-end
+    margin-bottom: 64px
+    &:last-child
+      margin-bottom: 0
+  @media (max-width: 768px)
+    &-block
+      flex-direction: column
+      align-items: center
+  @media (max-width: 575px)
+    &-block
+      margin-bottom: 32px
+  &-title
+    margin-right: 24px
+    justify-self: flex-end
+    font-weight: normal
+    font-size: 24px
+    line-height: 29px
+    color: $desc
+  @media (max-width: 768px)
+    &-title
+      margin-right: 0
+      margin-bottom: 16px
+  &-buttons
+    display: grid
+    grid-template-columns: 208px 208px
+    grid-gap: 32px
+    &__item
+      position: relative
+      display: flex
+      align-items: center
+      justify-content: space-between
+      padding: 13px 24px
+      max-width: 208px
+      height: 56px
+      border-radius: 10px
+      text-decoration: none
+      transition: 0.3s ease
+      cursor: pointer
+      &:hover
+        transform: scale(1.04)
+        & .arrow
+          transform: translateX(5px)
+    @media (max-width: 575px)
+      &__item
+        max-width: 100%
+    &__wrapper
+      display: flex
+      align-items: center
+      span
+        margin-left: 16px
+        font-size: 20px
+        line-height: 24px
+        color: $title
+  @media (max-width: 768px)
+    &-buttons
+      grid-template-columns: 208px
+  @media (max-width: 575px)
+    &-buttons
+      width: 100%
+      grid-template-columns: 100%
+  &-content
+    display: none
+    &__title
+      display: block
+      text-align: center
+      margin-bottom: 24px
+    @media (max-width: 575px)
+      &__title
+        font-size: 24px
+        line-height: 32px
+    &__text
+      margin-bottom: 16px
+      font-weight: normal
+      font-size: 18px
+      line-height: 22px
+      color: $desc
+      a
+        color: $blue
+        &:hover
+          color: $desc
+    &__image
+      display: block
+      margin: 0 auto
+      margin-bottom: 24px
+      width: 100%
+      max-width: 700px
+      box-shadow: 0px 1px 7px rgba(0, 0, 0, 0.2)
+    
+  &-wrp
+    display: flex
+    align-items: center
+    margin-bottom: 24px
+    img
+      margin-right: 24px
+      width: 100%
+      max-width: 130px
+    p
+      margin-bottom: 0
+  @media (max-width: 575px)
+    &-wrp
+      flex-direction: column
+      img
+        margin-right: 0
+        margin-bottom: 16px

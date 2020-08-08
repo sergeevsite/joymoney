@@ -1,0 +1,84 @@
+.newsPage
+  padding-top: 24px
+  &-wrapper
+    display: grid
+    grid-template-columns: 1fr 330px
+    grid-gap: 0 32px
+  @media (max-width: 1280px)
+    &-wrapper
+      grid-template-columns: 1fr 330px
+      grid-gap: 0 24px
+  @media (max-width: 768px)
+    &-wrapper
+      grid-template-columns: 1fr
+  &__image
+    img
+      margin-top: 24px
+      height: 100%
+      max-height: 276px
+      width: 100%
+      object-fit: cover
+      object-position: left
+  @media (max-width: 575px)
+    &__image
+      margin: 0 -17px
+      img
+        width: auto
+  &-sidebar
+    height: max-content
+    padding: 24px 32px 32px
+    background-color: $bg
+    border-radius: 20px
+    &__title
+      font-weight: 600
+      font-size: 24px
+      line-height: 29px
+      color: $grey
+  @media (max-width: 768px)
+    &-sidebar
+      margin: 0 -17px
+      padding: 16px 24px 24px
+  &-item
+    margin-top: 24px
+    margin-bottom: 32px
+    &:last-child
+      margin-bottom: 0
+    &__image
+      margin-bottom: 14px
+      width: 100%
+      max-width: 320px
+      border-radius: 5px
+    @media (max-width: 768px)
+      &__image
+        max-width: 100%
+    &__title
+      font-weight: 600
+      font-size: 18px
+      line-height: 22px
+      color: $title
+    &__description
+      margin: 8px 0
+      font-weight: normal
+      font-size: 14px
+      line-height: 22px
+      color: $desc
+      max-height: 44px
+      overflow: hidden
+    &__link
+      display: block
+      font-weight: normal
+      font-size: 16px
+      line-height: 19px
+      text-align: right
+      color: $blue
+      &:hover
+        color: $desc
+.newsGallery
+  width: 100%
+  img
+    height: 180px
+    width: 32%
+    @media ( min-width: 769px ) and ( max-width: 992px )
+      width: 48%
+    @media ( max-width: 768px )
+     width: 100%

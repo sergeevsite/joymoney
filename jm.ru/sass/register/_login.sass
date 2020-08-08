@@ -1,0 +1,35 @@
+.login
+  padding: 72px 0
+  &-form
+    &__button
+      margin-top: 0
+    @media (max-width: 575px)
+      &__button
+        margin-top: 16px
+        margin-bottom: 16px
+    &__link
+      color: $blue
+      &:hover
+        color: $desc
+    &__text
+      font-weight: normal
+      font-size: 18px
+      line-height: 22px
+      color: $desc
+    @media (max-width: 575px)
+      &__text
+        margin-bottom: 5px
+  &-wrapper
+    margin-top: 32px
+    display: flex
+    justify-content: space-between
+    align-items: center
+  @media (max-width: 575px)
+    &-wrapper
+      margin-top: 24px
+      flex-direction: column
+      align-items: flex-start
+@media (max-width: 768px)
+  .login
+    padding: 24px 0
+

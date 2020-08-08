@@ -1,0 +1,66 @@
+.prolongation
+  padding-top: 80px
+  &-list
+    margin: 0 auto
+    margin-top: 32px
+    max-width: 548px
+    &__item
+      display: flex
+      align-items: center
+      margin-bottom: 49px
+      &:last-child
+        & > .prolongation-list__number
+          &:after
+            display: none
+    @media (max-width: 575px)
+      &__item
+        margin-bottom: 29px
+    @media (max-width: 390px)
+      &__item
+        margin-bottom: 18px
+    &__number
+      position: relative
+      margin-right: 32px
+      max-width: 93px
+      min-width: 93px
+      width: 93px
+      height: 93px
+      border-radius: 50%
+      border: 1px solid $orange
+      background-color: $white
+      text-align: center
+      font-weight: 600
+      font-size: 48px
+      line-height: 90px
+      color: $blue
+      &:after
+        content: ''
+        position: absolute
+        bottom: -50px
+        left: 50%
+        width: 1px
+        height: 100%
+        background-color: $orange
+        z-index: -1
+    @media (max-width: 575px)
+      &__number
+        max-width: 59px
+        min-width: 59px
+        width: 59px
+        height: 59px
+        font-size: 32px
+        line-height: 56px
+    @media (max-width: 390px)
+      &__number
+        &:after
+          bottom: -90px
+          height: 140px
+    &__text
+      font-weight: normal
+      font-size: 18px
+      line-height: 22px
+      color: $desc
+    @media (max-width: 575px)
+      &__text
+        font-size: 14px
+        line-height: 17px

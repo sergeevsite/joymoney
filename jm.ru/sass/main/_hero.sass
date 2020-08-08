@@ -1,0 +1,131 @@
+.hero
+  position: relative
+  padding-top: 72px
+  padding-bottom: 0
+  background: url('../img/hero/bg.jpg') no-repeat
+  background-position: 50% 40px
+  background-size: cover
+  overflow: hidden
+  & > .container
+    position: relative
+  &-top
+    display: flex
+    justify-content: space-between
+    align-items: center
+  &-title
+    position: absolute
+    bottom: 0
+    background: rgba(22, 108, 183, 0.8)
+    width: 100%
+    z-index: 2
+  @media (max-width: 768px)
+    &-title
+      position: relative
+      background: transparent
+  &__title
+    margin-top: 29px
+    margin-bottom: 8px
+    padding-right: 50%
+    font-weight: bold
+    font-size: 80px
+    line-height: 82px
+    color: $white
+  @media (max-width: 1280px)
+    &__title
+      font-size: 48px
+      line-height: 58px
+  @media (max-width: 768px)
+    &__title
+      padding-right: 0
+  @media (max-width: 575px)
+    &__title
+      font-size: 38px
+      line-height: 45px
+  &__description
+    margin-bottom: 32px
+    padding-right: 50%
+    font-weight: normal
+    font-size: 24px
+    line-height: 29px
+    color: $white
+  @media (max-width: 1280px)
+    &__description
+      font-size: 18px
+      line-height: 24px
+  @media (max-width: 768px)
+    &__description
+      padding-right: 0
+  &-nav
+  @media (max-width: 1090px)
+    &-nav
+      display: none
+  &-list
+    display: flex
+    list-style: none
+    &__item
+      margin-right: 32px
+      &:last-child
+        margin-right: 0
+    &__text
+      font-weight: normal
+      font-size: 18px
+      line-height: 22px
+  &-private
+    &__button
+      display: flex
+      align-items: center
+      padding: 13px 22px
+      border: none
+      border-radius: 10px
+      background: $blue
+      box-shadow: 0px 0px 10px rgba(22, 108, 183, 0.55)
+      cursor: pointer
+      outline: none
+      transition: 0.2s
+      text-decoration: none
+      &:hover
+        background-color: $blue3
+        box-shadow: 0px 0px 20px rgba(22, 108, 183, 0.75)
+      &:active
+        background-color: $blue3
+        box-shadow: inset 0px 1px 7px rgba(0, 0, 0, 0.3), inset 0px -1px 7px rgba(0, 0, 0, 0.3)
+    @media (max-width: 575px)
+      &__button
+        padding: 8px 12px
+        margin-left: 16px
+        width: 185px
+    &__image
+      margin-right: 8px
+    &__text
+      color: $white
+  &-bottom
+    & > .container
+      display: grid
+      grid-template-columns: 1fr 1fr
+      align-items: center
+      grid-gap: 24px
+    @media (max-width: 768px)
+      & > .container
+        grid-template-columns: 1fr
+  &-image
+    justify-self: center
+    transform: translateY(10px)
+  @media (max-width: 990px)
+    &-image
+      width: 370px
+  @media (max-width: 768px)
+    &-image
+      text-align: center
+      width: 100%
+      order: 2
+  &-calc
+    justify-self: end
+    // height: 100%
+    // max-height: 467px
+    width: 100%
+    max-width: 557px
+    z-index: 9
+  @media (max-width: 768px)
+    &-calc
+      justify-self: center
+      order: 1

@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="./js/ionRangeSlider/ion.rangeSlider.css">
+  <!-- <link rel="stylesheet" href="./css/style.css"> -->
+</head>
+
+<style>
+  .calc {
+    display: grid;
+    grid-template-columns: 1fr;
+    max-width: 300px;
+    border-radius: 6px;
+    border: 1px solid #ccc;
+    padding: 15px;
+    font-size: 18px;
+    font-family: sans-serif;
+  }
+  .calc__row {
+    display: flex;
+    justify-content: space-between;
+  }
+  .calc__row > *{
+    margin-bottom: 15px;
+  }
+  .calc__range {
+    margin-bottom: 15px;
+  }
+</style>
+
+<body>
+
+  <div class="calc">
+    <div class="calc__row">
+      <span class="calc__label">Сколько вам нужно?</span>
+      <span class="calc__value calc__value--sum">3000 руб.</span>
+    </div>
+    <input type="text" class="calc__range calc__range--sum">
+    <div class="calc__row">
+      <span class="calc__label">На какой срок?</span>
+      <span class="calc__value calc__value--date">15 дней</span>
+    </div>
+    <input type="text" class="calc__range calc__range--date">
+    <div class="calc__row">
+      <div class="calc__total">
+        <span>к возврату <span class="js-calc__total">3 500 Р</span></span>
+        
+      </div>
+    </div>
+    <div class="calc__row">
+      <div class="calc__deadline">
+        <span>до <span class="js-calc__deadline">22</span> августа</span>
+      </div>
+    </div>
+  </div>
+
+
+  <script src="./js/jquery/jquery-3.4.1.min.js"></script>
+  <script src="./js/ionRangeSlider/ion.rangeSlider.min.js"></script>
+  <!-- Scripts -->
+  <script src="./js/calculate.js"></script>
+</body>
+</html>

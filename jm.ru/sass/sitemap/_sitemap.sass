@@ -1,0 +1,37 @@
+.sitemap
+  padding-top: 24px
+  &-wrapper
+    display: grid
+    grid-template-columns: 1fr 1fr
+  @media (max-width: 575px)
+    &-wrapper
+      grid-template-columns: 1fr
+  &-col
+    border-left: 1px solid $blue
+    padding-left: 48px
+    &:first-child
+      border: none
+      padding-left: 0
+    a
+      display: block
+      margin-bottom: 10px
+      font-size: 18px
+      line-height: 22px
+      color: $desc
+      &:before
+        content: ''
+        display: inline-block
+        margin-right: 10px
+        vertical-align: middle
+        width: 5px
+        height: 5px
+        border-radius: 50%
+        background-color: $desc
+      &:hover
+        font-weight: 600
+        color: $blue
+  @media (max-width: 575px)
+    &-col
+      border: none
+      padding-left: 0
+  

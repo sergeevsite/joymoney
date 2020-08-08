@@ -1,0 +1,818 @@
+*
+  box-sizing: border-box
+  margin: 0
+  padding: 0
+  outline: none
+  // list-style: none
+body
+  position: relative
+  font-family: 'Proxima Nova', sans-serif
+  font-size: 18px
+  overflow-x: hidden
+img
+  max-width: 100%
+section
+  padding: 100px 0
+@media (max-width: 768px)
+  section
+    padding: 60px 0
+.container
+  position: relative
+  max-width: 1216px
+  margin: auto
+@media (max-width: 1280px)
+  .container
+    padding: 0 17px
+
+// title
+.title
+  display: block
+  margin-bottom: 40px
+  font-weight: 600
+  font-size: 48px
+  line-height: 58px
+  text-align: center
+  color: $title
+@media (max-width: 768px)
+  .title
+    margin-bottom: 18px
+    font-size: 36px
+    line-height: 29px
+.title-internal
+  padding-top: 24px
+  padding-bottom: 0
+  &__text
+    margin: 0
+    margin-top: 24px
+    padding-left: 18px
+    position: relative
+    font-weight: 600
+    font-size: 48px
+    line-height: 58px
+    color: $title
+    &::before
+      content: ''
+      position: absolute
+      left: 0
+      top: 50%
+      transform: translateY(-50%)
+      height: 100%
+      max-height: 100%
+      width: 4px
+      background-color: $orange
+  @media (max-width: 768px)
+    &__text
+      font-size: 36px
+      line-height: 44px
+//register-title
+.register-title
+  margin: 0
+  margin-bottom: 32px
+  font-weight: 600
+  font-size: 36px
+  line-height: 44px
+  color: $black
+  text-align: center
+@media (max-width: 768px)
+  .register-title
+    font-weight: 600
+    font-size: 24px
+    line-height: 29px
+
+// subtitle
+.subtitle
+  font-weight: 600
+  font-size: 36px
+  line-height: 44px
+  color: $title
+  
+// text 
+.text
+  font-weight: normal
+  font-size: 18px
+  line-height: 24px
+  color: $desc
+
+// box
+.box
+  background: #FFFFFF
+  box-shadow: 0px 1px 7px rgba(0, 0, 0, 0.2)
+  border-radius: 20px
+
+// link
+.link
+  color: $white
+  text-decoration: none
+  transition: 0.3s ease
+  border-bottom: 0px solid $white
+  &:hover
+    color: $white
+    border-bottom: 1px solid #ffffff7a
+  &-border
+    text-decoration: none
+    &::after
+      content: ''
+      position: absolute
+      bottom: 0
+      left: 0
+      width: 100%
+      height: 2px
+      background-color: #166cb777
+      transition: 0.3s ease
+      display: none
+    &:hover
+      color: $title
+      &::after
+        display: block
+
+// slider
+.slider
+  list-style: none
+  &-wrapper
+    display: flex
+    justify-content: space-between
+    align-items: center
+  &-button
+    width: 32px
+    min-width: 32px
+    height: max-content
+    border: none
+    background-color: transparent
+    cursor: pointer
+    outline: none
+    &.prev
+      margin-right: 14px
+    @media (max-width: 768px)
+      &.prev
+        margin-right: 0
+    &.next
+      margin-left: 14px
+      transform: rotate(180deg)
+    @media (max-width: 768px)
+      &.next
+        margin-left: 0
+    &:hover
+      opacity: 0.6
+  @media (max-width: 768px)
+    &-button
+      min-width: 16px
+.lSPager
+  margin-top: 12px !important
+  li
+    a
+      width: 16px !important
+      height: 16px !important
+      border: 1px solid $blue
+      background-color: transparent !important
+  li.active
+    a
+      background-color: $blue !important
+
+// button
+.button, .button-register, .button-border
+  display: block
+  width: 100%
+  max-width: 212px
+  margin-top: 24px
+  padding: 13px 0
+  border: none
+  border-radius: 10px
+  background-color: $orangeBtn
+  color: $white
+  box-shadow: 0px 0px 10px rgba(255, 122, 0, 0.55)
+  cursor: pointer
+  transition: 0.3s ease
+  text-align: center
+  text-decoration: none
+  &:hover
+    background-color: $orange
+    color: $white
+  &:active
+    box-shadow: inset 0px 1px 7px rgba(0, 0, 0, 0.3), inset 0px -1px 7px rgba(0, 0, 0, 0.3)
+  &-border
+    border: 1.5px solid $orangeBtn
+    background-color: $white
+    color: $orangeBtn
+    box-shadow: none
+    &:hover
+      background-color: $orangeBtn
+    &:active
+      box-shadow: inset 0px 1px 7px rgba(0, 0, 0, 0.3), inset 0px -1px 7px rgba(0, 0, 0, 0.3)
+  &-register
+    background-color: $blue
+    box-shadow: 0px 0px 10px rgba(22, 108, 183, 0.55)
+    &:hover
+      background-color: $blue3
+    &:active
+      box-shadow: inset 0px 1px 7px rgba(0, 0, 0, 0.3), inset 0px -1px 7px rgba(0, 0, 0, 0.3)
+
+// calc
+.calc
+  &-box
+    display: grid
+    padding: 44px 55px
+    border-radius: 20px
+    background: $white
+    box-shadow: 0px 1px 10px rgba(0, 0, 0, 0.25)
+  @media (max-width: 990px)
+    &-box
+      padding: 34px 45px
+  @media (max-width: 575px)
+    &-box
+      padding: 24px 35px
+  &__title
+    font-weight: normal
+    font-size: 48px
+    line-height: 58px
+    color: $title
+  @media (max-width: 990px)
+    &__title
+      font-size: 36px
+  &-slide
+    &-title, &-indicator
+      display: flex
+      justify-content: space-between
+    @media (max-width: 575px)
+      &-title
+        display: flex
+        flex-direction: column
+    &__text, &__value, &-indicator
+      font-weight: normal
+      font-size: 24px
+      line-height: 29px
+      color: $desc
+    @media (max-width: 990px)
+      &__text, &__value, &-indicator
+        font-size: 18px
+        line-height: 24px
+    &__value
+      border: none
+      font-weight: 600
+    &-range
+      width: 100%
+      input
+        width: 100%
+    &__description
+      padding-bottom: 20px
+      font-size: 18px
+      color: $desc
+      opacity: 0
+      height: 0
+      overflow: hidden
+      transition: 0.2s
+      animation: slideUp 0.5s ease forwards
+      &.active
+        height: 40px
+        animation: slideDown 0.5s ease forwards
+        transition: 0.3s
+      &.bigtext
+        height: 80px
+        animation: slideDown 0.5s ease forwards
+        transition: 0.3s
+  &-result
+    &__text, &__value
+      font-weight: normal
+      font-size: 18px
+      line-height: 26px
+      color: $desc
+    &__value
+      font-weight: 600
+    &.top, &.bottom
+      &-week, &-general
+        display: none
+        &.active
+          display: block
+      &-return
+        &.active
+          display: none
+// slider style
+.ui-slider
+  margin: 16px 0
+  border: none
+  background-color: $track
+  height: 4px
+  & > .ui-slider-handle
+    top: -.6em
+    height: 26px 
+    width: 26px
+    border: 2px solid $white
+    border-radius: 50%
+    background: $orangeBtn
+    outline: none
+    cursor: pointer
+.ui-slider-range-min
+  background: $aqua
+.ui-widget.ui-widget-content
+  border: none
+
+.slick-slide
+  img
+    display: inline-block
+.slick-track
+  display: flex
+  align-items: center
+      
+// logo
+.logo
+  &-block
+    display: flex
+    justify-content: space-between
+    flex-wrap: wrap
+    align-items: center
+    margin: 0 auto
+  &-item
+    margin: 8px 16px
+    justify-self: center
+    transition: 0.2s
+    opacity: 0.6
+    &:hover
+      opacity: 1
+
+notice
+.notice
+  padding: 24px 32px
+  border-radius: 7px
+  background: $white
+  box-shadow: 0px 1px 10px rgba(0, 0, 0, 0.25)
+  a.link
+    color: $blue
+    border-color: $blue
+  &-close
+    margin-left: 20px
+    position: relative
+    width: 16px
+    height: 16px
+    cursor: pointer
+    &:after, &::before
+      content: ''
+      position: absolute
+      top: 50%
+      left: 0
+      width: 100%
+      border: 1px solid $title
+    &::after
+      transform: rotate(-45deg)
+    &::before
+      transform: rotate(45deg)
+    &:hover
+      &:after, &::before
+        border-color: $blue
+@media (max-width: 768px)
+  .notice
+    padding: 18px
+
+// breadcrumbs
+.breadcrumbs
+  font-weight: normal
+  font-size: 18px
+  line-height: 22px
+  span
+    color: $blue
+  &__return
+    color: $desc
+    text-decoration: none
+    &:hover
+      color: $desc
+      border-color: $desc
+  &__current
+    color: $blue
+
+// article
+.article
+  padding: 60px 0
+  background-image: url('../img/article/bg-logo.png')
+  background-repeat: no-repeat
+  background-size: cover
+  background-color: $blue
+  text-align: center
+  &__title
+    margin-bottom: 16px
+    padding: 0 60px
+    font-weight: 600
+    font-size: 36px
+    line-height: 44px
+    color: $white
+  @media (max-width: 768px)
+    &__title
+      padding: 0 10px
+      font-size: 24px
+      line-height: 29px
+  &__text
+    margin: 0 auto
+    max-width: 660px
+    font-weight: normal
+    font-size: 18px
+    line-height: 22px
+    color: $white
+  @media (max-width: 768px)
+    &__text
+      max-width: 100%
+@media (max-width: 768px)
+  .article
+    padding: 32px 0
+
+// document
+.document
+  padding-top: 24px
+  & > .container
+    padding: 0 100px
+  @media (max-width: 1280px)
+    & > .container
+      padding: 0 32px
+  @media (max-width: 768px)
+    & > .container
+      padding: 0 17px
+  &__title
+    margin-bottom: 32px
+  &-wrapper
+    display: grid
+    grid-template-columns: 1fr 1fr
+    grid-gap: 0 48px
+  @media (max-width: 575px)
+    &-wrapper
+      grid-template-columns: 1fr
+  &-item
+    display: flex
+    margin-bottom: 24px
+    &:last-child
+      margin-bottom: 0
+    &__image
+      align-self: start
+      margin-right: 16px
+    &__content
+      display: flex
+      flex-direction: column
+    &__title
+      margin-bottom: 5px
+      font-weight: normal
+      font-size: 16px
+      line-height: 19px
+      text-decoration: none
+      color: $title
+      &:hover
+        text-decoration: underline
+    &__size
+      font-weight: normal
+      font-size: 14px
+      line-height: 17px
+      color: $desc
+  @media (max-width: 768px)
+    &-item
+      &:last-child
+        margin-bottom: 24px
+  &-internal
+    padding-top: 32px
+    &__title
+      font-size: 36px
+      line-height: 44px
+    @media (max-width: 575px)
+      &__title
+        display: none
+
+// arrow
+.arrow
+  position: relative
+  height: 11px
+  transition: 0.3s ease
+  &:after, &:before
+    content: ''
+    position: absolute
+    right: 0
+    width: 14px
+    height: 2px
+    background-color: $blue
+    border-radius: 5px 0 0 5px
+  &:after
+    bottom: 0
+    transform: rotate(-45deg)
+  &:before
+    top: 0
+    transform: rotate(45deg)
+
+// seo
+.seo, .newsPage-text
+  padding-top: 24px
+  padding-bottom: 32px
+  h2
+    margin-bottom: 16px
+    font-weight: 600
+    font-size: 24px
+    line-height: 29px
+    color: $title
+  h3
+    margin-bottom: 16px
+    font-weight: 600
+    font-size: 18px
+    line-height: 24px
+    color: $title
+  p
+    margin-bottom: 16px
+    font-weight: normal
+    font-size: 18px
+    line-height: 24px
+    color: $desc
+  a
+    color: $blue
+    &:hover
+      color: $desc
+  ul
+    margin-bottom: 24px
+    list-style: none
+    li
+      display: flex
+      align-items: flex-start
+      margin-bottom: 8px
+      color: $desc
+      &:before
+        content: ''
+        display: inline-block
+        margin: 0 12px
+        margin-top: 8px
+        vertical-align: middle
+        width: 5px
+        min-width: 5px
+        height: 5px
+        border-radius: 50%
+        background-color: $desc
+  ol
+    margin-bottom: 24px
+    padding-left: 26px
+    li
+      margin-bottom: 8px
+      color: $desc
+  img
+    object-fit: cover
+    border-radius: 5px
+    &.left
+      max-width: 410px
+      max-height: 300px
+      float: left
+      margin-right: 16px
+      margin-bottom: 24px
+    &.right
+      max-width: 410px
+      max-height: 300px
+      float: right
+      margin-left: 16px
+      margin-bottom: 24px
+  @media (max-width: 768px)
+    img
+      &.left, &.right
+        margin-left: 0
+        margin-right: 0
+        float: none
+  @media (max-width: 575px)
+    img
+      &.left, &.right
+        width: 100%
+  &__button
+    margin-top: 0
+    margin-bottom: 24px
+    position: relative
+    left: 50%
+    transform: translateX(-50%)
+  &-wrapper
+    margin-bottom: 32px
+    a
+      display: block
+      margin-bottom: 10px
+      font-weight: normal
+      font-size: 18px
+      line-height: 22px
+      color: $desc
+      &:hover
+        font-weight: 600
+        color: $blue
+    h3
+      margin-bottom: 8px
+      font-weight: 600
+      font-size: 24px
+      line-height: 29px
+      color: $title
+
+// tabs
+.tabs
+  &__button
+    margin-bottom: 8px
+    margin-right: 24px
+    padding: 10px 20px
+    font-weight: normal
+    font-size: 14px
+    line-height: 17px
+    border: 1px solid $blue
+    background-color: $white
+    border-radius: 7px
+    color: $blue
+    cursor: pointer
+    transition: 0.2s ease
+    &.active
+      background-color: $blue
+      box-shadow: 0px 0px 10px rgba(22, 108, 183, 0.55)
+      color: $white
+      &:hover
+        background-color: $blue
+        color: $white
+        opacity: 1
+    &:hover
+      background-color: $blue
+      color: $white
+      opacity: 0.8
+  @media (max-width: 575px)
+    &__button
+      margin-right: 8px
+  &-content
+    display: none
+    &.active
+      animation: slideDown 0.3s ease
+      display: block
+    &__item
+      border-bottom: 1px solid #8282825e
+      padding: 24px
+      h2
+        display: block
+        position: relative
+        padding-right: 30px
+        background-color: transparent
+        font-weight: 700
+        font-size: 24px
+        line-height: 29px
+        border: none
+        color: $title
+        cursor: pointer
+        &:after
+          content: "▼"
+          position: absolute
+          top: calc(50% - 7px)
+          right: 0px
+          display: inline-block
+          transition: 0.3s ease
+        &.ui-state-active
+          &:after
+            transform: rotate(180deg)
+      @media (max-width: 768px)
+        h2
+          font-size: 18px
+          line-height: 22px
+    @media (max-width: 575px)
+      &__item
+        padding: 16px
+    &__answer
+      padding-top: 16px
+      padding-right: 16px
+      font-size: 18px
+      line-height: 24px
+      border: none
+      color: $desc
+      a
+        color: $desc
+        &:hover
+          color: $blue
+      p
+        margin-bottom: 16px
+      ul
+        margin-bottom: 16px
+        list-style: none
+        li
+          margin-bottom: 8px
+          &:before
+            content: ''
+            display: inline-block
+            margin: 0 12px
+            vertical-align: middle
+            width: 5px
+            height: 5px
+            border-radius: 50%
+            background-color: $desc
+    @media (max-width: 768px)
+      &__answer
+        font-size: 14px
+        line-height: 17px
+      
+// search
+.search
+  position: relative
+  input
+    padding: 13px 58px
+    padding-right: 17px
+    height: 48px
+    background: $bg
+    border: none
+    box-shadow: 0px 1px 7px rgba(0, 0, 0, 0.2)
+    border-radius: 10px
+    font-weight: normal
+    font-size: 18px
+    line-height: 22px
+    color: $title
+    &::placeholder
+      color: $desc
+  @media (max-width: 575px)
+    input
+      padding: 13px 42px
+      padding-right: 17px
+  &__icon
+    position: absolute
+    left: 27px
+    top: 50%
+    transform: translateY(-50%)
+  @media (max-width: 575px)
+    &__icon
+      left: 17px
+
+// Field input
+.form
+  position: relative
+  padding: 48px 32px
+  max-width: 592px
+  margin: 0 auto
+  border-radius: 20px
+  box-shadow: 0px 1px 7px rgba(0, 0, 0, 0.25)
+  background: $white
+  z-index: 10
+@media (max-width: 768px)
+  .form
+    padding: 32px 16px
+@media (max-width: 575px)
+  .form
+    margin: 0 -17px
+    border-radius: 0
+.field
+  display: flex
+  flex-direction: column
+  margin-bottom: 22px
+  &-wrapper
+    display: grid
+    grid-auto-flow: column
+    grid-gap: 24px
+  label
+    margin-bottom: 8px
+    font-weight: normal
+    font-size: 18px
+    line-height: 22px
+    color: $desc
+  input, select
+    height: 48px
+    padding: 16px
+    color: $title
+    border: 1px solid $desc
+    border-radius: 10px
+    transition: 0.2s ease
+    &:focus
+      border-color: $blue
+  select
+    width: 100%
+
+// line
+.lineSection
+  position: relative
+  background: url('/img/register/background.jpg')
+  background-size: cover
+  &:after
+    content: ''
+    position: absolute
+    bottom: 0
+    width: 100%
+    height: 158px
+    background-color: $blue
+    z-index: 0
+
+// not-page
+.not-page
+  &__logo
+    img
+      display: block
+      margin: 0 auto
+      margin-bottom: 24px
+  &__title
+    margin-bottom: 24px
+  &__desc
+    text-align: center
+    a
+      color: $blue
+      &:hover
+        color: $desc
+  &__number
+    display: block
+    font-size: 250px
+    line-height: 315px
+    text-align: center
+    color: $blue
+  @media (max-width: 575px)
+    &__number
+      font-size: 150px
+  &__button
+    margin: 0 auto
+    max-width: 400px
+    padding: 13px 18px
+@media (max-width: 575px)
+  .not-page
+    padding: 10px 0
+
+// disable nav arrows
+.lb-nav
+  & > a.lb-prev, & > a.lb-next
+      background: none !important
+.lb-cancel
+  background: none !important
+.lb-data
+  .lb-close
+    background: none !important

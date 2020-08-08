@@ -1,0 +1,56 @@
+.callback
+  padding: 0
+  margin: 0
+  background-color: $blue
+  &-content
+    position: relative
+    display: grid
+    grid-template-columns: 1fr 1fr 0.5fr
+    align-items: center
+    padding-top: 27px
+    padding-bottom: 36px
+  @media (max-width: 768px)
+    &-content
+      grid-template-columns: 1fr
+  &__title
+    font-weight: bold
+    font-size: 96px
+    line-height: 100px
+    color: $white
+  @media (max-width: 990px)
+    &__title
+      font-size: 48px
+      line-height: 58px
+  &__text
+    max-width: 450px
+    font-weight: normal
+    font-size: 24px
+    line-height: 29px
+    color: $white
+    & > .link
+      border-bottom: 1px solid #ffffff7a
+      transition: 0.3s ease
+      &:hover
+        border-bottom: 0px solid $white
+  @media (max-width: 990px)
+    &__text
+      max-width: 300px
+      font-size: 18px
+      line-height: 24px
+  @media (max-width: 768px)
+    &__text
+      max-width: 100%
+  &-calc
+    position: absolute
+    right: 0
+    width: 557px
+  @media (max-width: 990px)
+    &-calc
+      width: 420px
+  @media (max-width: 768px)
+    &-calc
+      position: relative
+      margin-top: 24px
+      width: 100%
+      max-width: 557px
+      justify-self: center

@@ -1,0 +1,246 @@
+.footer
+  padding-bottom: 45px
+  background-color: $bg
+  &__logo
+    padding: 32px 0
+  &-content
+    display: grid
+    grid-template-columns: 0.7fr 2fr 1fr
+    grid-gap: 24px
+    padding-bottom: 32px
+    margin-bottom: 18px
+    border-bottom: 0.5px solid #828282fd
+  @media (max-width: 768px)
+    &-content
+      grid-template-areas: "footer-box__menu footer-box__doc" "footer-box__contacts footer-box__contacts"
+      grid-template-columns: 1fr 1fr
+  @media (max-width: 575px)
+    &-content
+      grid-template-areas: "footer-box__menu" "footer-box__doc" "footer-box__contacts"
+      grid-template-columns: 1fr
+  &-box
+    &:last-child  
+      display: flex
+      justify-content: flex-end
+  @media (max-width: 768px)
+    &-box
+      &:last-child  
+        justify-content: flex-start
+      &__menu
+        grid-area: footer-box__menu
+      &__doc
+        grid-area: footer-box__doc
+      &__contacts
+        grid-area: footer-box__contacts
+  &-menu
+    display: grid
+    grid-template-columns: 1fr 2fr
+    grid-gap: 0 60px
+    // display: grid
+    // grid-template-columns: max-content 1fr 1fr
+    // grid-template-rows: max-content 1fr
+  @media (max-width: 390px)
+    &-menu
+      grid-template-columns: 1fr
+  &-item
+    max-width: 270px
+    &__title
+      display: block
+      margin-bottom: 16px
+      font-weight: normal
+      font-size: 18px
+      line-height: 22px
+      color: $title
+  &-list
+    list-style: none
+    &__link
+      position: relative
+      width: max-content
+      font-weight: normal
+      font-size: 14px
+      line-height: 24px
+      color: $desc
+      cursor: pointer
+  &-contacts
+    max-width: 200px
+    justify-self: flex-end
+  @media (max-width: 768px)
+    &-contacts
+      max-width: 100%
+      width: 100%
+  &-wrp
+    display: flex
+    align-items: center
+    margin-bottom: 8px
+    img
+      margin-right: 8px
+  &-info
+    &__text
+      position: relative
+      font-weight: 600
+      font-size: 18px
+      line-height: 22px
+      color: $grey
+      text-decoration: none
+    &__timetable
+      margin-top: 8px
+      margin-bottom: 24px
+      font-weight: normal
+      font-size: 14px
+      line-height: 17px
+      color: $title
+    &-wrapper
+      margin-top: 24px
+  @media (max-width: 768px)
+    &-info
+      display: flex
+      justify-content: space-between
+      & > div:last-child
+        margin-top: -38px
+  @media (max-width: 390px)
+    &-info
+      flex-direction: column
+      & > div:last-child
+        max-width: 160px
+        margin-top: 24px
+  &-social
+    display: flex
+    align-items: center
+    justify-content: space-between
+    a
+      &:hover
+        opacity: 0.8
+    // a
+    //   &:hover
+    //     svg
+    //       path
+    //         fill: $blue
+  &-partner
+    margin-bottom: 24px
+    &__image
+      margin-right: 24px
+      vertical-align: middle
+      &:last-child
+        margin-right: 0
+  &-data
+    display: grid
+    grid-template-columns: 1fr max-content
+    grid-gap: 50px
+    align-items: end
+  @media (max-width: 768px)
+    &-data
+      grid-template-columns: 1fr
+      grid-gap: 16px
+  &-requisites
+    &__text
+      margin-bottom: 16px
+      font-weight: normal
+      font-size: 12px
+      line-height: 15px
+      color: $desc
+      &:last-child
+        margin-bottom: 0
+  &-logotype
+    &__text
+      display: block
+      font-weight: normal
+      font-size: 9px
+      line-height: 11px
+      color: $desc
+  &-cookies
+    display: none
+    position: fixed
+    bottom: 0
+    padding: 24px 0
+    padding-bottom: 50px
+    width: 100%
+    background: $white
+    box-shadow: 0px 1px 10px rgba(0, 0, 0, 0.15)
+    z-index: 99
+    &-wrapper
+      display: flex
+      align-items: center
+      justify-content: space-between
+      background: $white
+    &__text
+      padding-right: 24px
+      font-weight: normal
+      font-size: 18px
+      line-height: 24px
+      color: $desc
+      a
+        color: $blue
+        &:hover
+          color: $blue
+          border-color: $blue
+    @media (max-width: 768px)
+      &__text
+        padding-left: 24px
+        padding-right: 0
+    @media (max-width: 575px)
+      &__text
+        font-size: 14px
+        line-height: 20px
+    &__close
+      position: relative
+      min-width: 24px
+      min-height: 24px
+      width: 24px
+      height: 24px
+      cursor: pointer
+      &:after, &:before
+        content: ''
+        position: absolute
+        top: 10px
+        right: 0
+        width: 100%
+        height: 2px
+        background-color: $desc
+      &:after
+        transform: rotate(45deg)
+        transition: 0.2s ease
+      &:before
+        transform: rotate(-45deg)
+        transition: 0.5s ease
+      &:hover
+        &:after
+          transform: rotate(135deg)
+        &:before
+          transform: rotate(-135deg)
+    @media (max-width: 768px)
+      &__close
+        order: -1
+  @media (max-width: 575px)
+    &-cookies
+      padding: 16px 0
+  &-app
+    margin-top: 16px
+// Register
+.footer-register
+  &-content
+    display: flex
+    justify-content: space-between
+  @media (max-width: 768px)
+    &-content
+      flex-direction: column
+  &-contacts
+    padding-top: 32px
+    display: grid
+    grid-template-columns: 1fr 1fr
+    grid-gap: 32px
+    max-width: 100%
+    width: auto
+  @media (max-width: 768px)
+    &-contacts
+      padding-top: 0
+      grid-gap: 0
+      grid-template-columns: 1fr
+  &-social
+  @media (max-width: 768px)
+    &-social
+      justify-content: flex-start
+      img
+        margin-right: 24px
+  &-wrp
+    margin-bottom: 8px
+
