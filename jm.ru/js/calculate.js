@@ -55,11 +55,9 @@ window.addEventListener('DOMContentLoaded', () => {
       }
     }
 
-    syncValue(range, rangeInit) {
+    syncValue(range, data) {
       const values = document.querySelector(range.fieldValue);
-      for(let i = 0; i < rangeInit.options.values.length; i++) {
-        values.textContent = rangeInit.options.values[i];
-      }
+      values.textContent = data.from_value;
     }
 
     init() {
@@ -75,10 +73,16 @@ window.addEventListener('DOMContentLoaded', () => {
           step: range.step,
           values: this.valuesCustom(range, range.values),
           hide_from_to: range.hide_from_to,
-          hide_min_max: range.hide_min_max
+          hide_min_max: range.hide_min_max,
+          onStart: data => {
+            this.syncValue(range, data);
+          },
+          onChange: data => {
+            this.syncValue(range, data);
+          }
         }).data("ionRangeSlider");
 
-        this.syncValue(range, rangeInit);
+        
       }
     }
 
@@ -89,7 +93,7 @@ window.addEventListener('DOMContentLoaded', () => {
       selector: '.calc__range--sum',
       fieldValue: '.calc__value--sum',
       skin: "round",
-      min: 0,
+      min: 3000,
       max: 60000,
       from: 3,
       step: 500,
