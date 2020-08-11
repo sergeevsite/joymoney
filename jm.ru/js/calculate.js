@@ -5,13 +5,18 @@ window.addEventListener('DOMContentLoaded', () => {
   class Calculate {
     constructor(data) {
       this.data = data;
+      this.total = document.querySelector('.js-calc__total');
+      this.globalData = {
+        percentSale: 0,
+        percent: 1,
+        termWeek: 10
+      };
     }
 
     valuesCustom(range, values) {
       if(range.valuesCustom) {
         let valuesArr = [];
         values.forEach((item, i) => {
-
           if(range.valuesOptions) {
             if(i === range.valuesOptions.part) {
               if(i === 0) {
@@ -55,9 +60,53 @@ window.addEventListener('DOMContentLoaded', () => {
       }
     }
 
-    syncValue(range, data) {
+    convertFrom(range, rangeInit) {
+      let index;
+      rangeInit.options.values.forEach((item, i) => {
+        if(range.from === item) {
+          index = i;
+        }
+      })
+      return index;
+    }
+
+    syncValue(range, data, rangeInit) {
       const values = document.querySelector(range.fieldValue);
       values.textContent = data.from_value;
+    }
+
+    getData(range, data, id) {
+      if(id === 1) {
+        this.globalData.amount = data.from_value
+      }
+      if(id === 2) {
+        if(data.from >= 21) {
+          this.globalData.termWeek = data.from_value
+        } else {
+          this.globalData.term = data.from_value
+        }
+      }
+      this.calculatingResult(range, data, id);
+    }
+
+    calculatingResult(range, data, id) {
+      if(this.globalData.amount > 6000) {
+        this.total.textContent = this.globalData.amount + (this.globalData.amount * this.globalData.percent / 100 * this.globalData.term);
+      } else {
+        this.total.textContent = this.globalData.amount + (this.globalData.amount * this.globalData.percentSale * this.globalData.term);
+      }
+
+      if(id === 1) {
+
+      }
+
+      if(id === 2) {
+        if(data.from >= 21) {
+          console.log(data);
+        }
+
+      }
+
     }
 
     init() {
@@ -68,7 +117,6 @@ window.addEventListener('DOMContentLoaded', () => {
           type: range.type,
           min: range.min,
           max: range.max,
-          from: range.from,
           to: range.to,
           step: range.step,
           values: this.valuesCustom(range, range.values),
@@ -79,13 +127,20 @@ window.addEventListener('DOMContentLoaded', () => {
           },
           onChange: data => {
             this.syncValue(range, data);
+            this.getData(range, data, i);
+          },
+          onUpdate: data => {
+            this.syncValue(range, data);
+            this.getData(range, data, i);
           }
         }).data("ionRangeSlider");
-
         
+        // start values
+        rangeInit.update({
+          from: this.convertFrom(range, rangeInit),
+        });
       }
     }
-
   };
 
   const calc = new Calculate({
@@ -95,12 +150,12 @@ window.addEventListener('DOMContentLoaded', () => {
       skin: "round",
       min: 3000,
       max: 60000,
-      from: 3,
+      from: 6000,
       step: 500,
       valuesCustom: true,
       values: [20000, 30000],
       // hide_from_to: true,
-      // hide_min_max: true,
+      hide_min_max: true,
     },
     range_2: {
       selector: '.calc__range--date',
@@ -108,6 +163,7 @@ window.addEventListener('DOMContentLoaded', () => {
       skin: "round",
       min: 10,
       max: 18,
+      from: 15,
       step: 1,
       valuesCustom: true,
       values: [30, 10],
@@ -116,7 +172,7 @@ window.addEventListener('DOMContentLoaded', () => {
         step: 2
       },
       // hide_from_to: true,
-      // hide_min_max: true
+      hide_min_max: true
     }
   });
   calc.init();

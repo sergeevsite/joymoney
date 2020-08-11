@@ -3,7 +3,7 @@ $(document).ready(function() {
 
   // Опции
   // Данные сумм
-  let START_MONEY = 7500,
+  let START_MONEY = 6000,
       MAX_MONEY = 60000,
       MIN_MONEY = 3000,
       STEP_MONEY = 500,
@@ -341,7 +341,11 @@ $(document).ready(function() {
           // Верхний калькулятор
           $('#top_week_result').text(calculation(dataResult.topCalculator).week + ' Р');
           $('#top_result').text(calculation(dataResult.topCalculator).total + ' Р');
-          $('#top_return_result').text((Math.round((dataResult.topCalculator.money * (dataResult.topCalculator.term / 100)) + dataResult.topCalculator.money)).toLocaleString() + ' Р');
+          if(dataResult.topCalculator.money <= 6000) {
+            $('#top_return_result').text((Math.round((dataResult.topCalculator.money * 0) + dataResult.topCalculator.money)).toLocaleString() + ' Р');
+          } else {
+            $('#top_return_result').text((Math.round((dataResult.topCalculator.money * (dataResult.topCalculator.term / 100)) + dataResult.topCalculator.money)).toLocaleString() + ' Р');
+          }
 
           // Нижний калькулятор
           $('#bottom_week_result').text(calculation(dataResult.bottomCalculator).week + ' Р');
@@ -363,7 +367,12 @@ $(document).ready(function() {
       // Верхний калькулятор
       $('#top_week_result').text(calculation(dataResult.topCalculator).week + ' Р');
       $('#top_result').text(calculation(dataResult.topCalculator).total + ' Р');
-      $('#top_return_result').text((Math.round((dataResult.topCalculator.money * (dataResult.topCalculator.term / 100)) + dataResult.topCalculator.money)).toLocaleString() + ' Р');
+      
+      if(dataResult.topCalculator.money <= 6000) {
+        $('#top_return_result').text((Math.round((dataResult.topCalculator.money * 0) + dataResult.topCalculator.money)).toLocaleString() + ' Р');
+      } else {
+        $('#top_return_result').text((Math.round((dataResult.topCalculator.money * (dataResult.topCalculator.term / 100)) + dataResult.topCalculator.money)).toLocaleString() + ' Р');
+      }
         // Дата
         $('#top_value_term').text(getDate(dataResult.topCalculator.term));
       // Нижний калькулятор
